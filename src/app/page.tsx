@@ -89,7 +89,7 @@ export default function Home() {
           <div className="fixed inset-0 z-50 flex">
             {/* Overlay preto opaco cobrindo toda a tela */}
             <div
-              className="absolute inset-0 bg-black opacity-100 transition-opacity duration-300"
+              className="absolute inset-0 bg-black opacity-100"
               onClick={() => setMenuOpen(false)}
               aria-label="Fechar menu"
             />
