@@ -1,7 +1,9 @@
+// next.config.ts
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: "/siteadv-2",
+    basePath: '/siteadv-2',
+    assetPrefix: '/siteadv-2/',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
