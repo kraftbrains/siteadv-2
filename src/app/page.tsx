@@ -1,102 +1,153 @@
-import Image from "next/image";
+import { FaBalanceScale, FaEye, FaHeart, FaGavel, FaUserTie, FaBuilding, FaUserShield, FaUsers } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col min-h-screen">
+      {/* Header/Navegação */}
+      <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur shadow z-50 flex justify-between items-center px-8 py-4">
+        <div className="flex items-center gap-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width={40} height={40} className="rounded-full" />
+          <span className="text-2xl font-bold text-[#bfa46b]">Lara Martins Advogados</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <nav className="space-x-6 text-lg font-medium">
+          <a href="#sobre" className="hover:text-[#bfa46b] transition">Sobre</a>
+          <a href="#areas" className="hover:text-[#bfa46b] transition">Áreas</a>
+          <a href="#equipe" className="hover:text-[#bfa46b] transition">Equipe</a>
+          <a href="#contato" className="hover:text-[#bfa46b] transition">Contato</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center text-center min-h-screen w-full mt-20 overflow-hidden p-0">
+        <div className="absolute inset-0 w-full h-full -z-10">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="Fundo escritório" className="w-full h-full object-cover object-center opacity-80" />
+        </div>
+        <div className="py-32 px-4 flex flex-col items-center text-center bg-black/60 rounded-xl max-w-2xl mx-auto mt-10 relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Lara Martins Advogados</h1>
+          <p className="text-lg md:text-2xl mb-8 text-white drop-shadow">Excelência, ética e compromisso com o seu direito.</p>
+          <a href="#contato" className="bg-[#bfa46b] hover:bg-[#a38c4e] text-white font-semibold py-3 px-8 rounded-full transition shadow-lg">Fale Conosco</a>
+        </div>
+      </section>
+
+      {/* Sobre Section */}
+      <section id="sobre" className="py-20 px-4 bg-white text-gray-900 flex flex-col items-center text-center relative">
+        <div className="absolute inset-0 -z-10 opacity-10">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80" alt="Sobre" className="object-cover object-center w-full h-full" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre o Escritório</h2>
+        <p className="max-w-2xl text-lg mb-6">
+          O escritório Lara Martins Advogados atua com excelência, ética e dedicação, oferecendo soluções jurídicas personalizadas para cada cliente. Nossa equipe é formada por profissionais experientes e comprometidos com a defesa dos seus direitos. Atendemos presencialmente e online, com foco em resultados e atendimento humanizado.
+        </p>
+        <div className="flex flex-wrap justify-center gap-8 mt-8">
+          <div className="flex flex-col items-center">
+            <FaBalanceScale size={60} className="text-[#bfa46b]" />
+            <h3 className="font-semibold mt-2">Missão</h3>
+            <p className="text-sm max-w-xs">Defender os interesses dos clientes com ética, transparência e excelência técnica.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaEye size={60} className="text-[#bfa46b]" />
+            <h3 className="font-semibold mt-2">Visão</h3>
+            <p className="text-sm max-w-xs">Ser referência em advocacia personalizada e inovadora no Brasil.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaHeart size={60} className="text-[#bfa46b]" />
+            <h3 className="font-semibold mt-2">Valores</h3>
+            <p className="text-sm max-w-xs">Ética, respeito, comprometimento, inovação e empatia.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Áreas de Atuação */}
+      <section id="areas" className="py-20 px-4 bg-gray-50 text-gray-900 flex flex-col items-center text-center relative">
+        <div className="absolute inset-0 -z-10 opacity-10">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80" alt="Áreas" className="object-cover object-center w-full h-full" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">Áreas de Atuação</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaGavel size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Direito Civil</h3>
+            <p className="text-gray-700">Contratos, responsabilidade civil, família e sucessões.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaUserTie size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Direito Trabalhista</h3>
+            <p className="text-gray-700">Defesa dos direitos de trabalhadores e empregadores.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaBuilding size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Direito Empresarial</h3>
+            <p className="text-gray-700">Consultoria e assessoria para empresas de todos os portes.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaUserShield size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Direito Previdenciário</h3>
+            <p className="text-gray-700">Aposentadorias, pensões e benefícios do INSS.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaUsers size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Direito do Consumidor</h3>
+            <p className="text-gray-700">Proteção e defesa dos direitos do consumidor.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <FaBalanceScale size={48} className="text-[#bfa46b]" />
+            <h3 className="text-xl font-semibold mb-2 mt-2">Outras Áreas</h3>
+            <p className="text-gray-700">Atuação em diversas áreas do Direito, consulte-nos.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Equipe */}
+      <section id="equipe" className="py-20 px-4 bg-white text-gray-900 flex flex-col items-center text-center relative">
+        <div className="absolute inset-0 -z-10 opacity-10">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Equipe" className="object-cover object-center w-full h-full" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">Nossa Equipe</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+          <div className="bg-gray-50 rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dra. Lara Martins" width={96} height={96} className="rounded-full mb-4" />
+            <h3 className="text-xl font-semibold mb-1">Dra. Lara Martins</h3>
+            <p className="text-[#bfa46b] font-medium mb-2">OAB/SP 123456</p>
+            <p className="text-gray-700 text-sm">Especialista em Direito Civil e Empresarial. Fundadora do escritório.</p>
+          </div>
+          <div className="bg-gray-50 rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. João Silva" width={96} height={96} className="rounded-full mb-4" />
+            <h3 className="text-xl font-semibold mb-1">Dr. João Silva</h3>
+            <p className="text-[#bfa46b] font-medium mb-2">OAB/SP 654321</p>
+            <p className="text-gray-700 text-sm">Atuação em Direito Trabalhista e Previdenciário.</p>
+          </div>
+          <div className="bg-gray-50 rounded-lg shadow-lg p-8 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dra. Maria Souza" width={96} height={96} className="rounded-full mb-4" />
+            <h3 className="text-xl font-semibold mb-1">Dra. Maria Souza</h3>
+            <p className="text-[#bfa46b] font-medium mb-2">OAB/SP 789012</p>
+            <p className="text-gray-700 text-sm">Especialista em Direito do Consumidor e Família.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="py-20 px-4 bg-gray-50 text-gray-900 flex flex-col items-center text-center relative">
+        <div className="absolute inset-0 -z-10 opacity-10">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=1200&q=80" alt="Contato" className="object-cover object-center w-full h-full" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">Fale Conosco</h2>
+        <p className="max-w-xl mb-8 text-lg">Entre em contato para agendar uma consulta ou tirar dúvidas. Atendimento presencial e online.</p>
+        <form className="bg-white rounded-lg shadow-lg p-8 flex flex-col gap-4 max-w-md w-full mx-auto">
+          <input type="text" placeholder="Nome" className="border rounded px-4 py-2" required />
+          <input type="email" placeholder="E-mail" className="border rounded px-4 py-2" required />
+          <textarea placeholder="Mensagem" className="border rounded px-4 py-2" rows={4} required />
+          <button type="submit" className="bg-[#bfa46b] hover:bg-[#a38c4e] text-white font-semibold py-3 px-8 rounded-full transition shadow-lg">Enviar</button>
+        </form>
+        <div className="mt-8 text-gray-700">
+          <p><strong>Endereço:</strong> Av. Exemplo, 123 - Centro, São Paulo/SP</p>
+          <p><strong>Telefone:</strong> (11) 99999-9999</p>
+          <p><strong>E-mail:</strong> contato@laramartinsadvogados.com.br</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white text-gray-700 py-6 text-center mt-auto shadow-inner">
+        <p>&copy; {new Date().getFullYear()} Lara Martins Advogados. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
