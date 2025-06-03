@@ -1,29 +1,36 @@
-import { FaBalanceScale, FaEye, FaHeart, FaGavel, FaUserTie, FaBuilding, FaUserShield, FaUsers } from "react-icons/fa";
+import { FaBalanceScale, FaEye, FaHeart, FaGavel, FaUserTie, FaBuilding, FaUserShield, FaUsers, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header/Navegação */}
-      <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur shadow z-50 flex justify-between items-center px-8 py-4">
-        <div className="flex items-center gap-3">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width={40} height={40} className="rounded-full" />
-          <span className="text-2xl font-bold text-[#bfa46b]">Lara Martins Advogados</span>
+      <header className="fixed top-0 left-0 w-full bg- backdrop-blur shadow z-50 flex justify-between items-center px-8 h-20 border-b-2 border-[#bfa46b]">
+        <div className="flex flex-col justify-center h-full relative group">
+          <span className="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#bfa46b] via-[#fff2d6] to-[#bfa46b] animate-gradient-move drop-shadow-lg transition-all duration-500 group-hover:scale-105">Marina Fox</span>
+          <span className="text-xs md:text-base font-bold text-white tracking-widest text-right w-full pr-1">Advogados</span>
         </div>
-        <nav className="space-x-6 text-lg font-medium">
-          <a href="#sobre" className="hover:text-[#bfa46b] transition">Sobre</a>
-          <a href="#areas" className="hover:text-[#bfa46b] transition">Áreas</a>
-          <a href="#equipe" className="hover:text-[#bfa46b] transition">Equipe</a>
-          <a href="#contato" className="hover:text-[#bfa46b] transition">Contato</a>
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="space-x-4 text-sm font-medium">
+            <a href="#sobre" className="hover:text-[#bfa46b] transition">Sobre</a>
+            <a href="#areas" className="hover:text-[#bfa46b] transition">Áreas</a>
+            <a href="#equipe" className="hover:text-[#bfa46b] transition">Equipe</a>
+            <a href="#contato" className="hover:text-[#bfa46b] transition">Contato</a>
+          </nav>
+          <div className="flex items-center gap-2 ml-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#bfa46b] hover:text-[#a38c4e] transition"><FaInstagram size={18} /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#bfa46b] hover:text-[#a38c4e] transition"><FaFacebookF size={18} /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#bfa46b] hover:text-[#a38c4e] transition"><FaLinkedinIn size={18} /></a>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center text-center min-h-screen w-full mt-20 overflow-hidden p-0">
         <div className="absolute inset-0 w-full h-full -z-10">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="Fundo escritório" className="w-full h-full object-cover object-center opacity-80" />
+          <img src="/siteadv-2/law1.jpg" alt="Fundo escritório" className="w-full h-1/2 object-cover object-center opacity-80" />
         </div>
         <div className="py-32 px-4 flex flex-col items-center text-center bg-black/60 rounded-xl max-w-2xl mx-auto mt-10 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Lara Martins Advogados</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Marina Fox Advogados</h1>
           <p className="text-lg md:text-2xl mb-8 text-white drop-shadow">Excelência, ética e compromisso com o seu direito.</p>
           <a href="#contato" className="bg-[#bfa46b] hover:bg-[#a38c4e] text-white font-semibold py-3 px-8 rounded-full transition shadow-lg">Fale Conosco</a>
         </div>
@@ -36,7 +43,7 @@ export default function Home() {
         </div>
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre o Escritório</h2>
         <p className="max-w-2xl text-lg mb-6">
-          O escritório Lara Martins Advogados atua com excelência, ética e dedicação, oferecendo soluções jurídicas personalizadas para cada cliente. Nossa equipe é formada por profissionais experientes e comprometidos com a defesa dos seus direitos. Atendemos presencialmente e online, com foco em resultados e atendimento humanizado.
+          O escritório Marina Fox Advogados atua com excelência, ética e dedicação, oferecendo soluções jurídicas personalizadas para cada cliente. Nossa equipe é formada por profissionais experientes e comprometidos com a defesa dos seus direitos. Atendemos presencialmente e online, com foco em resultados e atendimento humanizado.
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-8">
           <div className="flex flex-col items-center">
@@ -105,8 +112,8 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-bold mb-8">Nossa Equipe</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
           <div className="bg-gray-50 rounded-lg shadow-lg p-8 flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dra. Lara Martins" width={96} height={96} className="rounded-full mb-4" />
-            <h3 className="text-xl font-semibold mb-1">Dra. Lara Martins</h3>
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dra. Marina Fox" width={96} height={96} className="rounded-full mb-4" />
+            <h3 className="text-xl font-semibold mb-1">Dra. Marina Fox</h3>
             <p className="text-[#bfa46b] font-medium mb-2">OAB/SP 123456</p>
             <p className="text-gray-700 text-sm">Especialista em Direito Civil e Empresarial. Fundadora do escritório.</p>
           </div>
@@ -147,8 +154,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white text-gray-700 py-6 text-center mt-auto shadow-inner">
-        <p>&copy; {new Date().getFullYear()} Lara Martins Advogados. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Marina Fox Advogados. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
 }
+
